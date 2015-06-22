@@ -2,6 +2,17 @@
 
 html, body {
   background: #CCC;
+  position: relative;
+}
+
+
+.layout {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 /* main */
@@ -19,7 +30,16 @@ html, body {
   margin-bottom: 10px;
   text-align: center;
 }
+.main .page{
+  position: relative;
+  top: 0;
+}
 
+.main .page > div > div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 /* transitions */
 
 .fade-enter {
@@ -38,4 +58,44 @@ html, body {
 
 .fade-leave.fade-leave-active {
   opacity: 0.01;
+}
+
+
+
+.from-right-enter {
+  transition: all .2s linear;
+  transform: translateX(100%);
+}
+
+.from-right-enter.from-right-enter-active {
+  transform: translateX(0%);
+}
+
+.from-right-leave {
+  transition: all .2s linear;
+  transform: translateX(0%);
+}
+
+.from-right-leave.from-right-leave-active {
+  transform: translateX(-100%);
+}
+
+
+
+.from-left-enter {
+  transition: all .2s linear;
+  transform: translateX(-100%);
+}
+
+.from-left-enter.from-left-enter-active {
+  transform: translateX(0%);
+}
+
+.from-left-leave {
+  transition: all .2s linear;
+  transform: translateX(0%);
+}
+
+.from-left-leave.from-left-leave-active {
+  transform: translateX(100%);
 }

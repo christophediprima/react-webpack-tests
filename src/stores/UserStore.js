@@ -16,7 +16,6 @@ var UserStore = Reflux.createStore({
     };
   },
   onUserLogin : function(credentials){
-
     User = {
       email: credentials.email,
       role: Constants.ROLES.CONSUMER

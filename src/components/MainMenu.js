@@ -15,7 +15,7 @@ var MainMenu = React.createClass({
     return (
         <ul className="MainMenu">
           <li>
-            <Link routeName='home' to="home" onClick={this.goToRoute}>Home</Link>
+            <Link routeName='home' to="home">Home</Link>
           </li>
           <li>
             <Link to="propertyList">Property List</Link>
@@ -25,11 +25,6 @@ var MainMenu = React.createClass({
           </li>
         </ul>
       );
-  },
-  goToRoute: function(e){
-    e.preventDefault();
-    console.log(e.target);
-    this.transitionTo(e.target.routeName);
   }
 });
 

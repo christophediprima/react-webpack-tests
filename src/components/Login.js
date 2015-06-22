@@ -18,7 +18,8 @@ var Login = React.createClass({
       password: e.target.password.value
     });
   },
-  logout: function(){
+  logout: function(e){
+    e.preventDefault();
     Actions.userLogout();
   },
   render: function () {
