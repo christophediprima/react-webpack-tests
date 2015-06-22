@@ -10,6 +10,16 @@ var LayoutConstants = {
 		name: 'DeadEndLayout',
 		layoutTransitionName: 'from-right',
     pageTransitionName: 'from-left',
+	},
+	propertyMap: {
+		name: 'DeadEndLayout',
+		layoutTransitionName: 'from-right',
+    pageTransitionName: 'from-left',
+	},
+	propertyContact: {
+		name: 'DeadEndLayout',
+		layoutTransitionName: 'from-right',
+    pageTransitionName: 'from-left',
 	}
 };
 

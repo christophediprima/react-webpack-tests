@@ -15,7 +15,7 @@ var DeadEndLayout = React.createClass({
     return (
       <div className='dead-end layout main'>
         <a className="back-btn" onClick={this.back}>Retour</a>
-        <Menu />
+        <Menu className="tab-menu" />
         {this.props.children}
       </div>
       );
