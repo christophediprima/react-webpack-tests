@@ -3,6 +3,8 @@
 var React = require('react/addons');
 
 var Menu = require('./Menu');
+var Router = require('react-router');
+var Link = Router.Link;
 
 
 //var Actions = require('actions/xxx')
@@ -10,11 +12,23 @@ var Menu = require('./Menu');
 require('styles/DeadEndLayout.sass');
 
 var DeadEndLayout = React.createClass({
-
+  mixins: [
+    Router.State
+  ],
+  componentWillMount: function(){
+    console.log(history);
+  },
+  getInitialState: function(){
+    console.log(this.getRoutes());
+    return {
+      backLink: 'propertyList'
+    };
+  },
   render: function () {
+    console.log(this.state);
     return (
       <div className='dead-end layout main'>
-        <a className="back-btn" onClick={this.back}>Retour</a>
+        <Link to={this.state.backLink}>Retour</Link>
         <Menu className="tab-menu" />
         {this.props.children}
       </div>

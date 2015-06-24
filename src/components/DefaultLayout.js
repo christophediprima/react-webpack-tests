@@ -7,7 +7,7 @@ var React = require('react/addons');
 
 var MenuActions = require('actions/MenuActionCreators');
 
-var imageURL = require('../images/yeoman.png');
+var imageURL = require('../images/logo_210X50.png');
 
 var defaultMenu = [
   {
@@ -37,11 +37,9 @@ var DefaultLayout = React.createClass({
   render: function () {
     return (
       <div className='default layout main'>
-        <div className="cleafix">
-          <img src={imageURL} />
-          <Menu />
-          <UserMenu />
-        </div>
+        <img src={imageURL} />
+        <Menu />
+        <UserMenu />
         {this.props.children}
       </div>
       );

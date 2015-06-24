@@ -4,7 +4,6 @@ var React = require('react/addons');
 var Reflux = require('Reflux');
 
 var Link = require('react-router').Link;
-var Navigation = require('react-router').Navigation;
 
 var MenuStore = require('stores/MenuStore');
 
@@ -14,13 +13,11 @@ require('styles/Menu.sass');
 
 var Menu = React.createClass({
   mixins: [
-    Reflux.connect(MenuStore),
-    Navigation
+    Reflux.connect(MenuStore)
   ],
   render: function () {
-    console.log(this.props);
     let items = this.state.Menu.map((item)=>{
-          return <li>
+          return <li key={item.routeName}>
             <Link to={item.routeName} params={item.params}>{item.label}</Link>
           </li>;
         }),

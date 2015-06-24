@@ -15,30 +15,33 @@ var PropertyPage = React.createClass({
     Reflux.connect(MenuStore)
   ],
   componentWillMount: function(){
-    let propertyMenu = [
+    let params = this.getParams(),
+        propertyMenu = [
       {
-        label: 'detail',
+        label: 'Detail',
         routeName: 'property',
-        params: this.getParams()
+        params: params
       },
       {
-        label: 'map',
+        label: 'Map',
         routeName: 'propertyMap',
-        params: this.getParams()
+        params: params
       },
       {
-        label: 'contact',
+        label: 'Contact',
         routeName: 'propertyContact',
-        params: this.getParams()
+        params: params
       }
     ];
 
     MenuActions.menuChange(propertyMenu);
   },
   render: function () {
+    let routeName = this.getRoutes().reverse()[0].name;
+
     return (
         <div className="PropertyPage">
-          <p>Content for PropertyPage</p>
+          <p>Content for PropertyPage {routeName}</p>
         </div>
       );
   }

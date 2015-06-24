@@ -10,7 +10,6 @@ var React = require('react');
 var Router = require('react-router');
 var { Route, DefaultRoute} = Router;
 
-
 var content = document.getElementById('content');
 
 var Routes = (
@@ -29,6 +28,5 @@ var Routes = (
   </Route>
 );
 
-Router.run(Routes, function (Handler) {
   React.render(<Handler/>, content);
 });
